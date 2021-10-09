@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <DatePicker
+        android:id="@+id/datedp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="MissingConstraints" />
+
+    <EditText
+        android:id="@+id/infoet"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:ignore="MissingConstraints"
+        app:layout_constraintTop_toBottomOf="@id/datedp"/>
+
+    <Button
+        android:id="@+id/saveb"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Сохранить"
+        android:visibility="gone"
+        app:layout_constraintTop_toBottomOf="@id/infoet"
+        android:onClick="Save"/>
+    <Button
+        android:id="@+id/changeb"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Изменить"
+        android:visibility="gone"
+        app:layout_constraintTop_toBottomOf="@id/infoet"
+        android:onClick="Change"/>
+    <Button
+        android:id="@+id/deleteb"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Удалить"
+        android:visibility="gone"
+        app:layout_constraintTop_toBottomOf="@id/changeb"
+        android:onClick="Delete"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
